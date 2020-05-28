@@ -91,10 +91,10 @@ static void recovery_buttons_hw_init(void)
 {
 	/* Configure recovery button PINs */
 	/* {"RECOVERY_BUTTON", AT91C_PIN_PA(31), 0, PIO_PULLUP, PIO_INPUT} */
-	writel((0x01 << 31), AT91C_BASE_PIOA + PIO_IDR);
-	writel((0x01 << 31), AT91C_BASE_PIOA + PIO_PPUER);
-	writel((0x01 << 31), AT91C_BASE_PIOA + PIO_ODR);
-	writel((0x01 << 31), AT91C_BASE_PIOA + PIO_PER);
+	writel((0x01U << 31), AT91C_BASE_PIOA + PIO_IDR);
+	writel((0x01U << 31), AT91C_BASE_PIOA + PIO_PPUER);
+	writel((0x01U << 31), AT91C_BASE_PIOA + PIO_ODR);
+	writel((0x01U << 31), AT91C_BASE_PIOA + PIO_PER);
 
 	pmc_enable_periph_clock(AT91C_ID_PIOA);
 }
