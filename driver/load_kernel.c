@@ -321,7 +321,7 @@ static int boot_image_setup(unsigned char *addr, unsigned int *entry)
 	}
 
 	dbg_info("** Bad uImage magic: %x, zImage magic: %x\n",
-			magic, zimage_header->magic);
+			uimage_header->magic, zimage_header->magic);
 	return -1;
 }
 #endif /* !CONFIG_QSPI_XIP */
